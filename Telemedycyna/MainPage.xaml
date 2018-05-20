@@ -5,23 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Telemedycyna"
       mc:Ignorable="d" 
-      Title="Logowanie" WindowHeight="700" WindowWidth="600" ShowsNavigationUI="False" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+      Title="Logowanie" WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False" ScrollViewer.VerticalScrollBarVisibility="Hidden">
 
 
     <Grid ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
         <Grid.RowDefinitions>
-            <RowDefinition Height="220*"/>
-            <RowDefinition Height="250*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="180*"/>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+
         </Grid.RowDefinitions>
 
         <Label Content="KONTROLUJ SWOJĄ WAGĘ" Foreground="Gray" FontFamily="Segoe UI Light" 
                    FontSize="36"  Height="63" Width="420" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-        <Image Source="Icons/scale.png" Width="180" Height="180" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+        <Image Source="Icons/scale.png" Width="140" Height="140" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
         <Label Content="LOGIN" Foreground="black" FontFamily="Segoe UI Light" FontSize="16" Grid.Row="2" HorizontalAlignment="Left" Margin="15,0,0,0" />
         <TextBox x:Name="tbUserName" FontSize="22"  BorderBrush="Gray" Foreground="Gray" Width="450" 
                       Height="40" FontFamily="Segoe UI Light" Opacity="1" Padding="5,0,0,0" VerticalAlignment="Center" 
@@ -29,6 +31,8 @@
         <Label Content="HASŁO" Foreground="black" FontFamily="Segoe UI Light" FontSize="16" Grid.Row="4" HorizontalAlignment="Left" Margin="15,0,0,0" />
         <PasswordBox FontSize="22"  BorderBrush="Gray" Foreground="Gray" Width="450" Height="40" Padding="5,0,0,0"        
             VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" VerticalContentAlignment="Center"/>
-       <Button Content="Zaloguj się" Grid.Row="6" />
+       <Button Content="Zaloguj się" Grid.Row="6" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="20"/>
+       <Button Content="Załóż nowe konto" Grid.Row="7" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="20"/>
+
     </Grid>
 </Page>
