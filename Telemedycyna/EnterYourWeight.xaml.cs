@@ -20,9 +20,16 @@ namespace Telemedycyna
     /// </summary>
     public partial class EnterYourWeight : Page
     {
+        Archive archive;
         public EnterYourWeight()
         {
             InitializeComponent();
+            archive = new Archive();
+        }
+
+        private void ArchiveBTN_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(archive);
         }
     }
 }

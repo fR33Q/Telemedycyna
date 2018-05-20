@@ -10,17 +10,29 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+            
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
+            
 
         </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="2" Grid.Row="1" BorderBrush="Gray" BorderThickness="0.2"></Border>
+        <Border Grid.Row="2" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.1"></Border>
+        <Border Grid.Row="2" Grid.Column="1" BorderBrush="Gray" BorderThickness="0.1"></Border>
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.1"></Border>
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="0.1"></Border>
+
+
+
         <Label Content="Historia wpisów" FontFamily="Segoe UI Light" FontSize="26" Foreground="Black" Grid.ColumnSpan="3" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="DATA"  FontFamily="Segoe UI Light" FontSize="26" Foreground="Black" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="WAGA"  FontFamily="Segoe UI Light" FontSize="26" Foreground="Black" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    
     </Grid>
 </Page>
