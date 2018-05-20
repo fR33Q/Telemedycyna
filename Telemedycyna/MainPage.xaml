@@ -31,7 +31,7 @@
         <Label Content="HASŁO" Foreground="black" FontFamily="Segoe UI Light" FontSize="16" Grid.Row="4" HorizontalAlignment="Left" Margin="15,0,15,0" />
         <PasswordBox FontSize="22"  BorderBrush="Gray" Foreground="Gray" Height="40" Padding="5,0,0,0" Margin="15,0,15,0"   
             VerticalAlignment="Center" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" />
-       <Button Name="LogInBTN" Content="Zaloguj się" Grid.Row="6" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22"/>
+       <Button Name="LogInBTN" Content="Zaloguj się" Grid.Row="6" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22" Click="LogInBTN_Click"/>
        <Button Name="NewAccountBTN" Content="Załóż nowe konto" Grid.Row="7" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22" Click="NewAccountBTN_Click"/>
 
     </Grid>

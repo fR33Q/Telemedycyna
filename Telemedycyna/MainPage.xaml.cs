@@ -21,15 +21,22 @@ namespace Telemedycyna
     public partial class MainPage : Page
     {
         NewUser newUser;
+        EnterYourWeight weightPage;
         public MainPage()
         {
             InitializeComponent();
             newUser = new NewUser();
+            weightPage = new EnterYourWeight();
         }
 
         private void NewAccountBTN_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(newUser);
+        }
+
+        private void LogInBTN_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(weightPage);
         }
     }
 }

@@ -1,0 +1,37 @@
+﻿<Page x:Class="Telemedycyna.EnterYourWeight"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Telemedycyna"
+      mc:Ignorable="d" 
+     
+      Title="EnterYourWeight" WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+
+        </Grid.RowDefinitions>
+
+        <Calendar Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.ColumnSpan="3" />
+        <Label Content="WPISZ DZISIEJSZĄ WAGĘ: " FontFamily="Segoe UI Light" FontSize="20" Foreground="Black" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <Image Source="Icons/weightscale.png" Width="50" Height="50" Grid.Row="2" Grid.Column="0"/>
+        <TextBox Name="CurrentWeight" FontSize="22"  BorderBrush="Gray" Foreground="Gray"  
+                      Height="40" FontFamily="Segoe UI Light" Opacity="1" Padding="5,0,0,0" VerticalAlignment="Center" 
+                         VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="kg" FontFamily="Segoe UI Light" FontSize="22" Foreground="Black" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+    </Grid>
+</Page>
