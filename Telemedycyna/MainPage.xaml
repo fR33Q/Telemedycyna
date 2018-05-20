@@ -29,5 +29,6 @@
         <Label Content="HASŁO" Foreground="black" FontFamily="Segoe UI Light" FontSize="16" Grid.Row="4" HorizontalAlignment="Left" Margin="15,0,0,0" />
         <PasswordBox FontSize="22"  BorderBrush="Gray" Foreground="Gray" Width="450" Height="40" Padding="5,0,0,0"        
             VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" VerticalContentAlignment="Center"/>
+       <Button Content="Zaloguj się" Grid.Row="6" />
     </Grid>
 </Page>
