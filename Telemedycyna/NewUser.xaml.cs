@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace Telemedycyna
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for NewUser.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class NewUser : Page
     {
-        NewUser newUser;
-        public MainPage()
+        public NewUser()
         {
             InitializeComponent();
-            newUser = new NewUser();
-        }
-
-        private void NewAccountBTN_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(newUser);
         }
     }
 }
