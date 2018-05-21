@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApplicationManager;
 
 namespace Telemedycyna
 {
@@ -22,11 +23,13 @@ namespace Telemedycyna
     {
         NewUser newUser;
         EnterYourWeight weightPage;
+        DatabaseService databaseService;
         public MainPage()
         {
             InitializeComponent();
             newUser = new NewUser();
             weightPage = new EnterYourWeight();
+            databaseService = new DatabaseService();
         }
 
         private void NewAccountBTN_Click(object sender, RoutedEventArgs e)
@@ -36,6 +39,7 @@ namespace Telemedycyna
 
         private void LogInBTN_Click(object sender, RoutedEventArgs e)
         {
+            databaseService.LogIn(PasswordBox.Password, tbUserName.Text);
             this.NavigationService.Navigate(weightPage);
         }
     }
