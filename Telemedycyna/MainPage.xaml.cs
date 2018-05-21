@@ -34,6 +34,7 @@ namespace Telemedycyna
 
         private void NewAccountBTN_Click(object sender, RoutedEventArgs e)
         {
+            
             this.NavigationService.Navigate(newUser);
         }
 

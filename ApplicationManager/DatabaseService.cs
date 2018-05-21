@@ -33,5 +33,22 @@ namespace ApplicationManager
                 }
             }
         }
+
+        public void RegisterNewUser(string username, string password)
+        {
+            using (var db = new FMWEntities())
+            {
+                Users user = new Users();
+                user.Username = username;
+                user.Password = password;
+
+
+                var _user = db.Set<Users>();
+                _user.Add(user);
+                db.SaveChanges();
+
+
+            }
+        }
     }
 }
