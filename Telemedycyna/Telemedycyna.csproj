@@ -76,6 +76,7 @@
     <Compile Include="EnterYourWeight.xaml.cs">
       <DependentUpon>EnterYourWeight.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LogInService.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
