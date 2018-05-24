@@ -21,6 +21,7 @@ namespace Telemedycyna
     /// </summary>
     public partial class NewUser : Page
     {
+        
         DatabaseService databaseService;
         public NewUser()
         {

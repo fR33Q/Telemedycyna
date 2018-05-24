@@ -21,6 +21,8 @@ namespace Telemedycyna
     /// </summary>
     public partial class MainPage : Page
     {
+        public static string SendLogin;
+        
         NewUser newUser;
         EnterYourWeight weightPage;
         DatabaseService databaseService;
@@ -41,7 +43,19 @@ namespace Telemedycyna
         private void LogInBTN_Click(object sender, RoutedEventArgs e)
         {
             databaseService.LogIn(PasswordBox.Password, tbUserName.Text);
+            Send();
             this.NavigationService.Navigate(weightPage);
         }
+
+        #region Send
+        private void Send()
+        {
+            SendLogin = tbUserName.Text;
+
+        }
+        #endregion
+
+       
+        
     }
 }

@@ -1,0 +1,20 @@
+﻿<Page x:Class="Telemedycyna.SendPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Telemedycyna"
+      mc:Ignorable="d" 
+      WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False"
+      Title="SendPage">
+
+    <Grid Background="Black">
+        <Calendar HorizontalAlignment="Left" Margin="64,18,0,0" VerticalAlignment="Top" Name="Calendar" SelectionMode="MultipleRange"/>
+        <Button Content="Wyslij" Name="SendBTN" Click="SendBTN_Click" HorizontalAlignment="Left" Margin="80,276,0,0" VerticalAlignment="Top" Width="166" Height="45"/>
+
+
+
+    </Grid>
+    
+
+</Page>

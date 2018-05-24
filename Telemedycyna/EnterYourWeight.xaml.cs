@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApplicationManager;
 
 namespace Telemedycyna
 {
@@ -21,15 +22,38 @@ namespace Telemedycyna
     public partial class EnterYourWeight : Page
     {
         Archive archive;
+        DatabaseService databaseService;
+        DateTime date = DateTime.Now;
         public EnterYourWeight()
         {
             InitializeComponent();
             archive = new Archive();
+            databaseService = new DatabaseService();
         }
 
         private void ArchiveBTN_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(archive);
+        }
+
+        private void SaveBTN_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                databaseService.SendValuesToDatabase(Convert.ToInt32(CurrentWeight.Text), date, Description.Text, databaseService.GetUserID(MainPage.SendLogin));
+                MessageBox.Show("Pomyślnie dodano wpis do bazy danych!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ups!");
+
+            }
+        }
+
+        private void SendBTN_Click(object sender, RoutedEventArgs e)
+        {
+            SendPage send = new SendPage();
+            this.NavigationService.Navigate(send);
         }
     }
 }

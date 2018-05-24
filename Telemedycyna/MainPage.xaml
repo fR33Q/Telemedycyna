@@ -33,6 +33,6 @@
             VerticalAlignment="Center" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" />
        <Button Name="LogInBTN" Content="Zaloguj się" Grid.Row="6" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22" Click="LogInBTN_Click"/>
        <Button Name="NewAccountBTN" Content="Załóż nowe konto" Grid.Row="7" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22" Click="NewAccountBTN_Click"/>
-
+        
     </Grid>
 </Page>

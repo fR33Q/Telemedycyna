@@ -8,35 +8,24 @@
       WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False"
       Title="Archive">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="60*"/>
+    <Grid Height="77">
+        <ListView Name="listView" Foreground="Black" ItemsSource="{Binding Weights}" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Waga" Width="120" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Notatka" Width="120" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Data utworzenia" Width="120" DisplayMemberBinding="{Binding CreationDate}" />
+                </GridView>
+            </ListView.View>
 
-
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-
-
-        </Grid.RowDefinitions>
-        <Border Grid.ColumnSpan="2" Grid.Row="1" BorderBrush="Gray" BorderThickness="0.2"></Border>
-        <Border Grid.Row="2" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.1" Grid.RowSpan="2"></Border>
-        <Border Grid.Row="2" Grid.Column="1" BorderBrush="Gray" BorderThickness="0.1" Grid.RowSpan="2"></Border>
-        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.1"></Border>
-        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="0.1"></Border>
+        </ListView>
 
 
 
-        <Label Content="Historia wpisów" FontFamily="Segoe UI Light" FontSize="26" Foreground="Black" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,18"/>
-        <Label Content="DATA"  FontFamily="Segoe UI Light" FontSize="26" Foreground="Black" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="8,0"/>
-        <Label Content="WAGA"  FontFamily="Segoe UI Light" FontSize="26" Foreground="Black" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="8,0"/>
-        <Button Name="BackBTN" Content="Wróć" Grid.Row="4" Grid.ColumnSpan="3" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22" />
-     
+        <Button Name="ShowBTN" Click="ShowBTN_Click" Content="Pokaz" Width="300" FontFamily="Segoe UI Light" FontSize="22" Margin="0,103,0,-73" />
+        <!--<Button Name="BackBTN" Content="Wróć" Width="300" FontFamily="Segoe UI Light" FontSize="22" Margin="0,103,0,-73" />-->
+        <Calendar HorizontalAlignment="Left" Margin="-37,91,0,-167" VerticalAlignment="Top" Height="153" Width="169" Name="Calendar" SelectionMode="MultipleRange"/>
+
 
     </Grid>
 </Page>
