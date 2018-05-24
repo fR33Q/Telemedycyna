@@ -95,6 +95,7 @@
       <DependentUpon>WeightDB.edmx</DependentUpon>
       <LastGenOutput>WeightDB.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="DatabaseModel\WeightDB.edmx.sql" />
     <Content Include="DatabaseModel\WeightDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WeightDB.edmx</DependentUpon>

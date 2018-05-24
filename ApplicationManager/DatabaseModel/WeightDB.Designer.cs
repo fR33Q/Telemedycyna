@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Damian\Desktop\Telemedycyna\ApplicationManager\DatabaseModel\WeightDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\studia\telemedycyna1\Telemedycyna-develop\ApplicationManager\DatabaseModel\WeightDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

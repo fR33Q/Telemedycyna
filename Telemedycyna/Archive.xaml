@@ -8,11 +8,18 @@
       WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False"
       Title="Archive">
 
-    <Grid Height="77">
-        <ListView Name="listView" Foreground="Black" ItemsSource="{Binding Weights}" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="300"/>
+        </Grid.RowDefinitions>
+        <Label Content="Wybierz przedział czasu do wyświetlenia historii" FontFamily="Segoe UI Light" FontSize="20" Foreground="Black" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ListView Name="listView" Foreground="Black" ItemsSource="{Binding Weights}" Grid.Row="3">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Waga" Width="120" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Waga" Width="120" DisplayMemberBinding="{Binding Weight}"/>
                     <GridViewColumn Header="Notatka" Width="120" DisplayMemberBinding="{Binding Description}" />
                     <GridViewColumn Header="Data utworzenia" Width="120" DisplayMemberBinding="{Binding CreationDate}" />
                 </GridView>
@@ -22,9 +29,9 @@
 
 
 
-        <Button Name="ShowBTN" Click="ShowBTN_Click" Content="Pokaz" Width="300" FontFamily="Segoe UI Light" FontSize="22" Margin="0,103,0,-73" />
+        <Button Name="ShowBTN" Click="ShowBTN_Click" Content="Wyświetl" Width="300" Height="50" FontFamily="Segoe UI Light" FontSize="22" Grid.Row="2"/>
         <!--<Button Name="BackBTN" Content="Wróć" Width="300" FontFamily="Segoe UI Light" FontSize="22" Margin="0,103,0,-73" />-->
-        <Calendar HorizontalAlignment="Left" Margin="-37,91,0,-167" VerticalAlignment="Top" Height="153" Width="169" Name="Calendar" SelectionMode="MultipleRange"/>
+        <Calendar HorizontalAlignment="Center" VerticalAlignment="Stretch" Height="170" Width="200" Name="Calendar" SelectionMode="MultipleRange" Grid.Row="1"/>
 
 
     </Grid>
