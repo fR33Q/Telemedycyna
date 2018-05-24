@@ -8,9 +8,18 @@
       WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False"
       Title="SendPage">
 
-    <Grid Background="Black">
-        <Calendar HorizontalAlignment="Left" Margin="64,18,0,0" VerticalAlignment="Top" Name="Calendar" SelectionMode="MultipleRange"/>
-        <Button Content="Wyslij" Name="SendBTN" Click="SendBTN_Click" HorizontalAlignment="Left" Margin="80,276,0,0" VerticalAlignment="Top" Width="166" Height="45"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Calendar HorizontalAlignment="Center" VerticalAlignment="Top" Name="Calendar" SelectionMode="MultipleRange" Grid.Row="2"/>
+        <Label Content="Adres e-mail do wysłania pomiarów: " FontFamily="Segoe UI Light" FontSize="20" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0"/>
+        <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="18"  BorderBrush="Gray" Foreground="Black"
+                      FontFamily="Segoe UI Light" Opacity="1" Padding="5,0,0,0" Grid.Row="1" Margin="10,0,10,0"/>
+        <Button Content="Wyślij" Name="SendBTN" Click="SendBTN_Click" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="166" Height="45"/>
 
 
 
