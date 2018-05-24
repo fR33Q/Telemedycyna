@@ -1,0 +1,31 @@
+﻿<Page x:Class="Telemedycyna.Archive"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Telemedycyna"
+      mc:Ignorable="d" 
+      WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False"
+      Title="Archive">
+
+    <Grid Height="77">
+        <ListView Name="listView" Foreground="Black" ItemsSource="{Binding Weights}" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Waga" Width="120" DisplayMemberBinding="{Binding Weight}" />
+                    <GridViewColumn Header="Notatka" Width="120" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Data utworzenia" Width="120" DisplayMemberBinding="{Binding CreationDate}" />
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+
+
+        <Button Name="ShowBTN" Click="ShowBTN_Click" Content="Pokaz" Width="300" FontFamily="Segoe UI Light" FontSize="22" Margin="0,103,0,-73" />
+        <!--<Button Name="BackBTN" Content="Wróć" Width="300" FontFamily="Segoe UI Light" FontSize="22" Margin="0,103,0,-73" />-->
+        <Calendar HorizontalAlignment="Left" Margin="-37,91,0,-167" VerticalAlignment="Top" Height="153" Width="169" Name="Calendar" SelectionMode="MultipleRange"/>
+
+
+    </Grid>
+</Page>
