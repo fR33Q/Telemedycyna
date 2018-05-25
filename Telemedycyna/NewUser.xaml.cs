@@ -23,10 +23,14 @@ namespace Telemedycyna
     {
         
         DatabaseService databaseService;
+        MessagePage messagePage;
+        MessageWin messageWin;
         public NewUser()
         {
             InitializeComponent();
             databaseService = new DatabaseService();
+            messagePage = new MessagePage();
+            messageWin = new MessageWin();
         }
 
         private void NewAccountBTN_Click(object sender, RoutedEventArgs e)
@@ -38,7 +42,8 @@ namespace Telemedycyna
             }
             else
             {
-                MessageBox.Show("Błąd! Sprawdź poprawność wpisanych danych.");
+                messageWin.MessageLabel.Content = "elo";
+                messageWin.Show();
                 tbUsername.Clear();
                 pbNewPassOne.Clear();
                 pbNewPassTwo.Clear();
