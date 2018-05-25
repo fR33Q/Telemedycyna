@@ -24,11 +24,13 @@ namespace Telemedycyna
         Archive archive;
         DatabaseService databaseService;
         DateTime date = DateTime.Now;
+        MessageWin messageWin;
         public EnterYourWeight()
         {
             InitializeComponent();
             archive = new Archive();
             databaseService = new DatabaseService();
+            messageWin = new MessageWin();
         }
 
         private void ArchiveBTN_Click(object sender, RoutedEventArgs e)
@@ -41,11 +43,16 @@ namespace Telemedycyna
             try
             {
                 databaseService.SendValuesToDatabase(Convert.ToInt32(CurrentWeight.Text), date, Description.Text, databaseService.GetUserID(MainPage.SendLogin));
-                MessageBox.Show("Pomyślnie dodano wpis do bazy danych!");
+
+                //MessageBox.Show("Pomyślnie dodano wpis do bazy danych!");
+                messageWin.MessageLabel.Content = "Pomyślnie dodano wpis do bazy danych.";
+                messageWin.Show();
             }
             catch (Exception)
             {
-                MessageBox.Show("Ups!");
+                messageWin.MessageLabel.Content = "Coś poszło nie tak..";
+                messageWin.Show();
+                //MessageBox.Show("Ups!");
 
             }
         }

@@ -26,12 +26,14 @@ namespace Telemedycyna
         NewUser newUser;
         EnterYourWeight weightPage;
         DatabaseService databaseService;
+        MessageWin messageWin;
         public MainPage()
         {
             InitializeComponent();
             newUser = new NewUser();
             weightPage = new EnterYourWeight();
             databaseService = new DatabaseService();
+            messageWin = new MessageWin();
         }
 
         private void NewAccountBTN_Click(object sender, RoutedEventArgs e)

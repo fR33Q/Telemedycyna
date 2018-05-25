@@ -25,10 +25,11 @@ namespace Telemedycyna
     public partial class Archive : Page
     {
         DatabaseService databaseService = new DatabaseService();
-        
+        MessageWin messageWin;
         public Archive()
         {
             InitializeComponent();
+            messageWin = new MessageWin();
             
         }
 
@@ -41,7 +42,9 @@ namespace Telemedycyna
             }
             catch (Exception)
             {
-                MessageBox.Show("Nie wybrano daty!");
+                messageWin.MessageLabel.Content = "Nie wybrano daty!";
+                messageWin.Show();
+                //MessageBox.Show("Nie wybrano daty!");
 
             }
          
