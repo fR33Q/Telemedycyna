@@ -5,7 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Telemedycyna"
       mc:Ignorable="d" 
+      
       WindowHeight="800" WindowWidth="600" ShowsNavigationUI="False"
+      
       Title="Archive">
 
     <Grid>

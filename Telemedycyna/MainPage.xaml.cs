@@ -44,9 +44,17 @@ namespace Telemedycyna
 
         private void LogInBTN_Click(object sender, RoutedEventArgs e)
         {
-            databaseService.LogIn(PasswordBox.Password, tbUserName.Text);
-            Send();
-            this.NavigationService.Navigate(weightPage);
+            var loginState = databaseService.LogIn(PasswordBox.Password, tbUserName.Text);
+            if (loginState == true)
+            {
+                Send();
+                this.NavigationService.Navigate(weightPage);
+            }
+            else
+            {
+                MessageBox.Show("Podane dane są niepoprawne");
+
+            }
         }
 
         #region Send

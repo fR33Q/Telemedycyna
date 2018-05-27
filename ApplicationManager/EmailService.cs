@@ -14,18 +14,18 @@ namespace ApplicationManager
    public class EmailService
     {
         DatabaseService database = new DatabaseService();
-        public void SendEmail(DateTime startTime, DateTime endTime)
+        public void SendEmail(DateTime startTime, DateTime endTime, string email)
         {
+            var data = database.GetValuesByDate(startTime, endTime);
             var login = new NetworkCredential("doctor.weight1@gmail.com", "mlodetygrysy");
             var client = new SmtpClient("smtp.gmail.com");
             client.Port = 587;
             client.EnableSsl = true;
             client.Credentials = login;
             var msg = new MailMessage { From = new MailAddress("doctor.weight1@gmail.com", "Telemedycyna", Encoding.UTF8) };
-            msg.To.Add(new MailAddress ("dpiechnik2@gmail.com"));
+            msg.To.Add(new MailAddress (email));
             msg.Subject = "TELEMEDYCYNA";
-            msg.Body = "testowy mail";
-            // msg.Body = database.GetValuesByDate(startTime, endTime).ToString();
+             msg.Body = "testowy mail";
             msg.BodyEncoding = Encoding.UTF8;
             msg.IsBodyHtml = true;
             msg.Priority = MailPriority.Normal;

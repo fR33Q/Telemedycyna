@@ -29,8 +29,19 @@ namespace Telemedycyna
 
         private void SendBTN_Click(object sender, RoutedEventArgs e)
         {
-            var dates = Calendar.SelectedDates;
-            email.SendEmail(dates[0], dates[1]);
+            try
+            {
+                var dates = Calendar.SelectedDates;
+
+                email.SendEmail(dates[0], dates[1], txtEmail.Text);
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Cos jest nie tak: {0}" + ex.ToString());
+            }
         }
+
     }
 }

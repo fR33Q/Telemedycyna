@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Calendar HorizontalAlignment="Center" VerticalAlignment="Top" Name="Calendar" SelectionMode="MultipleRange" Grid.Row="2"/>
         <Label Content="Adres e-mail do wysłania pomiarów: " FontFamily="Segoe UI Light" FontSize="20" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0"/>
-        <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="18"  BorderBrush="Gray" Foreground="Black"
+        <TextBox Name="txtEmail" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="18"  BorderBrush="Gray" Foreground="Black"
                       FontFamily="Segoe UI Light" Opacity="1" Padding="5,0,0,0" Grid.Row="1" Margin="10,0,10,0"/>
         <Button Content="Wyślij " Name="SendBTN" Click="SendBTN_Click" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="166" Height="45"/>
 
