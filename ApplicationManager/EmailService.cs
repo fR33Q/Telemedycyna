@@ -8,15 +8,17 @@ using System.Net.Mail;
 using ApplicationManager;
 using System.ComponentModel;
 using System.Windows;
+using System.IO;
 
 namespace ApplicationManager
 {
    public class EmailService
     {
         DatabaseService database = new DatabaseService();
-        public void SendEmail(DateTime startTime, DateTime endTime, string email)
+        public void SendEmail(DateTime startDate, DateTime endDate, string email, string body)
         {
-            var data = database.GetValuesByDate(startTime, endTime);
+            CreateTxtFile(startDate, endDate);
+            Attachment data = new Attachment("wyniki.txt");
             var login = new NetworkCredential("doctor.weight1@gmail.com", "mlodetygrysy");
             var client = new SmtpClient("smtp.gmail.com");
             client.Port = 587;
@@ -25,9 +27,10 @@ namespace ApplicationManager
             var msg = new MailMessage { From = new MailAddress("doctor.weight1@gmail.com", "Telemedycyna", Encoding.UTF8) };
             msg.To.Add(new MailAddress (email));
             msg.Subject = "TELEMEDYCYNA";
-             msg.Body = "testowy mail";
+            msg.Body = body;
             msg.BodyEncoding = Encoding.UTF8;
             msg.IsBodyHtml = true;
+            msg.Attachments.Add(data);
             msg.Priority = MailPriority.Normal;
             msg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
             client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallBack);
@@ -51,6 +54,22 @@ namespace ApplicationManager
 
                 MessageBox.Show("Wyslano maila");
             }
+        }
+
+        private void CreateTxtFile(DateTime startDate, DateTime endDate)
+        {
+            var list = database.GetValuesByDate(startDate, endDate);
+            using (TextWriter tw = new StreamWriter("wyniki.txt"))
+            {
+                foreach (var item in list)
+                {
+                    tw.WriteLine(string.Format("Waga: {0} || Opis wyniku: {1} || Czas utworzenia: {2}", item.Weight, item.Description, item.CreationDate));
+                }
+
+                tw.Close();
+            }
+
+
         }
     }
 }

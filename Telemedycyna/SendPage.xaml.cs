@@ -33,7 +33,7 @@ namespace Telemedycyna
             {
                 var dates = Calendar.SelectedDates;
 
-                email.SendEmail(dates[0], dates[1], txtEmail.Text);
+                email.SendEmail(dates[0], dates[1], txtEmail.Text,txtBody.Text);
                 
             }
             catch (Exception ex)
